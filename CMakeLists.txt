@@ -3,4 +3,6 @@ project(hash_table C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(hash_table main.c)
+add_executable(hash_table main.c
+        hash_table.c
+        hash_table.h)
