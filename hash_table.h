@@ -16,8 +16,8 @@ typedef struct {
  * Represents a hash table.
  */
 typedef struct {
-    int count;
-    int capacity;
+    size_t count;
+    size_t capacity;
     HT_Entry** entries;
 } HT_HashTable;
 
@@ -26,7 +26,7 @@ typedef struct {
  * @param capacity The initial number of entries that the hash table can contain.
  * @return A new hash table.
  */
-HT_HashTable* HT_NewHashTable(int capacity);
+HT_HashTable* HT_NewHashTable(const size_t capacity);
 
 /**
  * Deletes the specified hash table.
