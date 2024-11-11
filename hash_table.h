@@ -4,12 +4,14 @@
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
+#define HT_INITIAL_BASE_SIZE 53
+
 /**
  * Represents a key-value pair within a hash table.
  */
 typedef struct {
-    char* key;
-    void* value;
+    const char* key;
+    const void* value;
 } HT_Entry;
 
 /**
@@ -33,5 +35,9 @@ HT_HashTable* HT_NewHashTable(const size_t capacity);
  * @param ht The hash table that will be deleted.
  */
 void HT_DeleteHashTable(HT_HashTable* ht);
+
+void HT_Put(HT_HashTable* ht, const char* key, const void* value, const size_t size);
+const void* HT_Get(HT_HashTable* ht, const char* key);
+bool HT_Remove(HT_HashTable* ht, const char* key);
 
 #endif //HASH_TABLE_H
