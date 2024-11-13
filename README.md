@@ -34,5 +34,9 @@ int main() {
 
     return 0;
 }
-
 ```
+
+## References
+
+- [Hash table](https://en.wikipedia.org/wiki/Hash_table)
+- [Write a hash table in C](https://github.com/jamesroutley/write-a-hash-table)
